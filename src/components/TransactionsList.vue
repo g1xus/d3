@@ -7,10 +7,9 @@
 <script setup>
 import gql from 'graphql-tag'
 import { useQuery } from '@vue/apollo-composable'
-import {watch} from "vue";
 import TransactionsEl from "@/components/TransactionsEl.vue";
 
-const { result, error} = useQuery(gql`
+const { result } = useQuery(gql`
       query {
         swaps(first: 5) {
           id
